@@ -17,6 +17,23 @@ namespace ALAMED
         private String msUnderneath;
         private int mnBar, mnRow;
         private bool mbChain = false;
+        private String msFound;
+        private int mnJustfound;
+
+        private void fElectrify(int nMode)
+        {
+            int nType;
+
+            for(int i = 1; i <= 64; i++)
+            {
+                nType = fHoletype(msShuffle2, i);
+                if (nType == nMode)
+                {
+                    fPlace(nMode, i);
+                }
+            }
+            fUpdateDisplay();
+        }
 
         private void fAdd()
         {
@@ -48,6 +65,8 @@ namespace ALAMED
             msShuffle2 = null;
             msUnderneath = null;
             mbChain = false;
+            msFound = "NNNNNN";
+            mnJustfound = 0;
 
             for(int i = 1; i <= 64; i++)
             {
@@ -88,6 +107,10 @@ namespace ALAMED
             }
             msUnderneath = msUnderneath.Substring(0, nSquare * 2 - 2) + sTwo + msUnderneath.Substring(nSquare * 2, (64 - nSquare) * 2);
         }
+        private void fPlace3(String sType, int nSquare)
+        {
+            msFound = msFound.Substring(0, nSquare  - 1) + sType + msFound.Substring(nSquare , 6 - nSquare);
+        }
 
         private void fFree(ref int nCol,ref int nRow)
         {
@@ -108,6 +131,12 @@ namespace ALAMED
             } while (bFound == false);
         }
 
+        private void fUpdateStatus()
+        {
+            String sText = msFound.Substring(2, 4);
+
+            lblFound.Text = "Found = " + sText;
+        }
         private void fUpdateDisplay()
         {
             PictureBox _pic = new PictureBox();
@@ -321,7 +350,7 @@ namespace ALAMED
             fPeek(nType, nRotate, ref _pic);
             pic88.Image = _pic.Image;
 
-
+            fUpdateStatus();
         }
 
 
@@ -410,19 +439,63 @@ namespace ALAMED
 
         }
 
+        private bool fPresent(int nMode)
+        {
+            String sLetter = msFound.Substring(nMode - 1, 1);
+
+            if (sLetter == "Y")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
         private void fClick(int nCol,int nRow)
         {
+            Random rnd1 = new Random();
             int nType, nPos;
-        
+            int nCount = rnd1.Next(4, 11);
+            int nColour;
+
             nPos = (mnBar - 1) * 8 + mnRow;
             nType = fHoletype(msUnderneath , nPos);
             if (nType == 1)
             {
                 nType = 2;
+                mnJustfound = 0;
+            }
+            else
+            {
+                if (fPresent(nType))
+                {
+                    fPlace3("Y", nType);
+                    fPlace(nType, nPos);
+                    fUpdateDisplay();
+                    MessageBox.Show("You win","GWin");;
+                    fReset();
+                    goto endline;
+                }
+                else
+                {
+                    fPlace3("Y", nType);
+                    mnJustfound = nType;
+                }
             }
             fPlace(nType, nPos);
+       
+            for (int i = 1; i <= nCount; i++)
+            {
+                fFree(ref nCol, ref nRow);
+                nPos = (nCol - 1) * 8 + nRow;
+                nColour = rnd1.Next(3, 7);
+                fPlace2(nColour, nPos);
+            }
 
             fUpdateDisplay();
+
+        endline:;
         }
 
         private void fSelectRow(int nMode)
@@ -571,6 +644,19 @@ namespace ALAMED
         private void Pic18_Click(object sender, EventArgs e)
         {
             fSelectRow(8);
+        }
+
+        private void BtnElectrify_Click(object sender, EventArgs e)
+        {
+            if (mnJustfound != 0)
+            {
+                fElectrify(mnJustfound);
+            }
+        }
+
+        private void BtnQNext_Click(object sender, EventArgs e)
+        {
+            fReset();
         }
 
         private void Form1_Load(object sender, EventArgs e)

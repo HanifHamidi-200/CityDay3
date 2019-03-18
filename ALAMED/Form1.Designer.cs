@@ -103,6 +103,10 @@
             this.btnBar6 = new System.Windows.Forms.Button();
             this.btnBar7 = new System.Windows.Forms.Button();
             this.btnBar8 = new System.Windows.Forms.Button();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.lblFound = new System.Windows.Forms.ToolStripStatusLabel();
+            this.btnElectrify = new System.Windows.Forms.Button();
+            this.btnQNext = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic18)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic28)).BeginInit();
@@ -169,6 +173,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic21)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic11)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -1069,11 +1074,54 @@
             this.btnBar8.UseVisualStyleBackColor = false;
             this.btnBar8.Click += new System.EventHandler(this.BtnBar8_Click);
             // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lblFound});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 426);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(800, 24);
+            this.statusStrip1.TabIndex = 2;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // lblFound
+            // 
+            this.lblFound.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.lblFound.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Left;
+            this.lblFound.Name = "lblFound";
+            this.lblFound.Size = new System.Drawing.Size(95, 19);
+            this.lblFound.Text = "Found = NNNN";
+            // 
+            // btnElectrify
+            // 
+            this.btnElectrify.BackColor = System.Drawing.Color.Yellow;
+            this.btnElectrify.Location = new System.Drawing.Point(471, 68);
+            this.btnElectrify.Name = "btnElectrify";
+            this.btnElectrify.Size = new System.Drawing.Size(140, 28);
+            this.btnElectrify.TabIndex = 3;
+            this.btnElectrify.Text = "&Electrify";
+            this.btnElectrify.UseVisualStyleBackColor = false;
+            this.btnElectrify.Click += new System.EventHandler(this.BtnElectrify_Click);
+            // 
+            // btnQNext
+            // 
+            this.btnQNext.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnQNext.Location = new System.Drawing.Point(640, 68);
+            this.btnQNext.Name = "btnQNext";
+            this.btnQNext.Size = new System.Drawing.Size(82, 84);
+            this.btnQNext.TabIndex = 4;
+            this.btnQNext.Text = "&QNext";
+            this.btnQNext.UseVisualStyleBackColor = false;
+            this.btnQNext.Click += new System.EventHandler(this.BtnQNext_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnQNext);
+            this.Controls.Add(this.btnElectrify);
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Form1";
@@ -1145,7 +1193,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic21)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic11)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -1225,6 +1276,10 @@
         private System.Windows.Forms.Button btnBar6;
         private System.Windows.Forms.Button btnBar7;
         private System.Windows.Forms.Button btnBar8;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel lblFound;
+        private System.Windows.Forms.Button btnElectrify;
+        private System.Windows.Forms.Button btnQNext;
     }
 }
 

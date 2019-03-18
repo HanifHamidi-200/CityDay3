@@ -103,6 +103,11 @@
             this.btnStart6 = new System.Windows.Forms.Button();
             this.btnStart7 = new System.Windows.Forms.Button();
             this.btnStart8 = new System.Windows.Forms.Button();
+            this.btnQNext = new System.Windows.Forms.Button();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.lblPoints = new System.Windows.Forms.ToolStripStatusLabel();
+            this.lblStatus = new System.Windows.Forms.ToolStripStatusLabel();
+            this.btnComply = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic18)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic28)).BeginInit();
@@ -169,6 +174,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic21)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic11)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -926,6 +932,7 @@
             this.btnStart1.TabIndex = 3;
             this.btnStart1.Text = "A";
             this.btnStart1.UseVisualStyleBackColor = false;
+            this.btnStart1.Click += new System.EventHandler(this.BtnStart1_Click);
             // 
             // btnStart2
             // 
@@ -936,6 +943,7 @@
             this.btnStart2.TabIndex = 4;
             this.btnStart2.Text = "B";
             this.btnStart2.UseVisualStyleBackColor = false;
+            this.btnStart2.Click += new System.EventHandler(this.BtnStart2_Click);
             // 
             // btnStart3
             // 
@@ -946,6 +954,7 @@
             this.btnStart3.TabIndex = 5;
             this.btnStart3.Text = "C";
             this.btnStart3.UseVisualStyleBackColor = false;
+            this.btnStart3.Click += new System.EventHandler(this.BtnStart3_Click);
             // 
             // btnStart4
             // 
@@ -956,6 +965,7 @@
             this.btnStart4.TabIndex = 6;
             this.btnStart4.Text = "D";
             this.btnStart4.UseVisualStyleBackColor = false;
+            this.btnStart4.Click += new System.EventHandler(this.BtnStart4_Click);
             // 
             // btnStart5
             // 
@@ -966,6 +976,7 @@
             this.btnStart5.TabIndex = 7;
             this.btnStart5.Text = "E";
             this.btnStart5.UseVisualStyleBackColor = false;
+            this.btnStart5.Click += new System.EventHandler(this.BtnStart5_Click);
             // 
             // btnStart6
             // 
@@ -976,6 +987,7 @@
             this.btnStart6.TabIndex = 8;
             this.btnStart6.Text = "F";
             this.btnStart6.UseVisualStyleBackColor = false;
+            this.btnStart6.Click += new System.EventHandler(this.BtnStart6_Click);
             // 
             // btnStart7
             // 
@@ -986,6 +998,7 @@
             this.btnStart7.TabIndex = 9;
             this.btnStart7.Text = "G";
             this.btnStart7.UseVisualStyleBackColor = false;
+            this.btnStart7.Click += new System.EventHandler(this.BtnStart7_Click);
             // 
             // btnStart8
             // 
@@ -996,16 +1009,70 @@
             this.btnStart8.TabIndex = 10;
             this.btnStart8.Text = "H";
             this.btnStart8.UseVisualStyleBackColor = false;
+            this.btnStart8.Click += new System.EventHandler(this.BtnStart8_Click);
+            // 
+            // btnQNext
+            // 
+            this.btnQNext.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnQNext.Location = new System.Drawing.Point(579, 27);
+            this.btnQNext.Name = "btnQNext";
+            this.btnQNext.Size = new System.Drawing.Size(85, 84);
+            this.btnQNext.TabIndex = 3;
+            this.btnQNext.Text = "&QNext";
+            this.btnQNext.UseVisualStyleBackColor = false;
+            this.btnQNext.Click += new System.EventHandler(this.BtnQNext_Click);
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lblStatus,
+            this.lblPoints});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 384);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(800, 24);
+            this.statusStrip1.TabIndex = 4;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // lblPoints
+            // 
+            this.lblPoints.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.lblPoints.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Left;
+            this.lblPoints.Name = "lblPoints";
+            this.lblPoints.Size = new System.Drawing.Size(76, 19);
+            this.lblPoints.Text = "Points = 240";
+            // 
+            // lblStatus
+            // 
+            this.lblStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.lblStatus.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Left;
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(104, 19);
+            this.lblStatus.Text = "Status = GoingUp";
+            // 
+            // btnComply
+            // 
+            this.btnComply.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnComply.Location = new System.Drawing.Point(670, 27);
+            this.btnComply.Name = "btnComply";
+            this.btnComply.Size = new System.Drawing.Size(85, 84);
+            this.btnComply.TabIndex = 5;
+            this.btnComply.Text = "comply";
+            this.btnComply.UseVisualStyleBackColor = false;
+            this.btnComply.Click += new System.EventHandler(this.BtnComply_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 408);
+            this.Controls.Add(this.btnComply);
+            this.Controls.Add(this.statusStrip1);
+            this.Controls.Add(this.btnQNext);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Form1";
             this.Text = "INTCOM";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pic18)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic28)).EndInit();
@@ -1072,7 +1139,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic21)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic11)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -1152,6 +1222,11 @@
         private System.Windows.Forms.Button btnStart6;
         private System.Windows.Forms.Button btnStart7;
         private System.Windows.Forms.Button btnStart8;
+        private System.Windows.Forms.Button btnQNext;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel lblPoints;
+        private System.Windows.Forms.ToolStripStatusLabel lblStatus;
+        private System.Windows.Forms.Button btnComply;
     }
 }
 
