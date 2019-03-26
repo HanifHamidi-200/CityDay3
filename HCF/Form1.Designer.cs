@@ -37,6 +37,9 @@
             this.txt4 = new System.Windows.Forms.TextBox();
             this.lbl4 = new System.Windows.Forms.Label();
             this.btnQNext = new System.Windows.Forms.Button();
+            this.btnOpen1 = new System.Windows.Forms.Button();
+            this.btnOpen2 = new System.Windows.Forms.Button();
+            this.btnOpen3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbl1
@@ -114,7 +117,7 @@
             // btnQNext
             // 
             this.btnQNext.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnQNext.Location = new System.Drawing.Point(435, 38);
+            this.btnQNext.Location = new System.Drawing.Point(355, 38);
             this.btnQNext.Name = "btnQNext";
             this.btnQNext.Size = new System.Drawing.Size(100, 85);
             this.btnQNext.TabIndex = 8;
@@ -122,11 +125,47 @@
             this.btnQNext.UseVisualStyleBackColor = false;
             this.btnQNext.Click += new System.EventHandler(this.BtnQNext_Click);
             // 
+            // btnOpen1
+            // 
+            this.btnOpen1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnOpen1.Location = new System.Drawing.Point(461, 38);
+            this.btnOpen1.Name = "btnOpen1";
+            this.btnOpen1.Size = new System.Drawing.Size(100, 85);
+            this.btnOpen1.TabIndex = 9;
+            this.btnOpen1.Text = "ElementsHCF";
+            this.btnOpen1.UseVisualStyleBackColor = false;
+            this.btnOpen1.Click += new System.EventHandler(this.BtnOpen1_Click);
+            // 
+            // btnOpen2
+            // 
+            this.btnOpen2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnOpen2.Location = new System.Drawing.Point(567, 38);
+            this.btnOpen2.Name = "btnOpen2";
+            this.btnOpen2.Size = new System.Drawing.Size(100, 85);
+            this.btnOpen2.TabIndex = 10;
+            this.btnOpen2.Text = "MetalTechnique";
+            this.btnOpen2.UseVisualStyleBackColor = false;
+            this.btnOpen2.Click += new System.EventHandler(this.BtnOpen2_Click);
+            // 
+            // btnOpen3
+            // 
+            this.btnOpen3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnOpen3.Location = new System.Drawing.Point(673, 38);
+            this.btnOpen3.Name = "btnOpen3";
+            this.btnOpen3.Size = new System.Drawing.Size(100, 85);
+            this.btnOpen3.TabIndex = 13;
+            this.btnOpen3.Text = "LocationTryouts";
+            this.btnOpen3.UseVisualStyleBackColor = false;
+            this.btnOpen3.Click += new System.EventHandler(this.BtnOpen3_Click_1);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(618, 210);
+            this.ClientSize = new System.Drawing.Size(806, 268);
+            this.Controls.Add(this.btnOpen3);
+            this.Controls.Add(this.btnOpen2);
+            this.Controls.Add(this.btnOpen1);
             this.Controls.Add(this.btnQNext);
             this.Controls.Add(this.txt4);
             this.Controls.Add(this.lbl4);
@@ -155,6 +194,9 @@
         private System.Windows.Forms.TextBox txt4;
         private System.Windows.Forms.Label lbl4;
         private System.Windows.Forms.Button btnQNext;
+        private System.Windows.Forms.Button btnOpen1;
+        private System.Windows.Forms.Button btnOpen2;
+        private System.Windows.Forms.Button btnOpen3;
     }
 }
 

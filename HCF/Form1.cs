@@ -42,13 +42,33 @@ namespace HCF
 
         }
         public Form1()
-        {
+        { 
             InitializeComponent();
         }
 
         private void BtnQNext_Click(object sender, EventArgs e)
         {
             fReset();
+        }
+
+        private void BtnOpen1_Click(object sender, EventArgs e)
+        {
+            fSub1 _dlg = new fSub1();
+            _dlg.ShowDialog();
+        }
+
+        private void BtnOpen2_Click(object sender, EventArgs e)
+        {
+            fSub2 _dlg = new fSub2();
+            _dlg.ShowDialog();
+
+        }
+
+        private void BtnOpen3_Click_1(object sender, EventArgs e)
+        {
+            fSub3 _dlg = new fSub3();
+            _dlg.ShowDialog();
+
         }
 
         private void Form1_Load(object sender, EventArgs e)

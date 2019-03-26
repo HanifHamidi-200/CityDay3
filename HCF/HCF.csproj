@@ -49,16 +49,127 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="fLSub1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fLSub1.Designer.cs">
+      <DependentUpon>fLSub1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fLSub2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fLSub2.Designer.cs">
+      <DependentUpon>fLSub2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fLSub3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fLSub3.Designer.cs">
+      <DependentUpon>fLSub3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fLSub4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fLSub4.Designer.cs">
+      <DependentUpon>fLSub4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fLSub5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fLSub5.Designer.cs">
+      <DependentUpon>fLSub5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fLSub6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fLSub6.Designer.cs">
+      <DependentUpon>fLSub6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fLSub7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fLSub7.Designer.cs">
+      <DependentUpon>fLSub7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fMSub1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fMSub1.Designer.cs">
+      <DependentUpon>fMSub1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fMSub2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fMSub2.Designer.cs">
+      <DependentUpon>fMSub2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fMSub3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fMSub3.Designer.cs">
+      <DependentUpon>fMSub3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fMSub4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fMSub4.Designer.cs">
+      <DependentUpon>fMSub4.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="fSub1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fSub1.Designer.cs">
+      <DependentUpon>fSub1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fSub2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fSub2.Designer.cs">
+      <DependentUpon>fSub2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fSub3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fSub3.Designer.cs">
+      <DependentUpon>fSub3.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="fLSub3.resx">
+      <DependentUpon>fLSub3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fLSub4.resx">
+      <DependentUpon>fLSub4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fMSub1.resx">
+      <DependentUpon>fMSub1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fMSub2.resx">
+      <DependentUpon>fMSub2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fMSub3.resx">
+      <DependentUpon>fMSub3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fMSub4.resx">
+      <DependentUpon>fMSub4.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fSub1.resx">
+      <DependentUpon>fSub1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fSub2.resx">
+      <DependentUpon>fSub2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fSub3.resx">
+      <DependentUpon>fSub3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
